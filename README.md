@@ -1,6 +1,6 @@
 This project analyzes a comprehensive NYCHA dataset from 2013 to February 2023, comprising 50,316 records with 25 attributes and 111 unique development identifiers (TDS#), to identify seasonal trends in water consumption and costs, aiming to improve water resource management and cost optimization by predicting water charges based on seasonal timestamps and unique TDS numbers.
 
-AWS Services used:
+**AWS Services used:**
 
 * Amazon S3
 * AWS Glue
