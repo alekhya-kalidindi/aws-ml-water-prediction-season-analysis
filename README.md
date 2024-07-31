@@ -106,8 +106,8 @@ AND CAST(REPLACE("Water&Sewer Charges",',','') AS FLOAT) > 0)
 SQL Query to Unload Data from Redshift to S3 Bucket
 ```
 UNLOAD ('SELECT * from "dev"."public"."finaltable"')
-TO 's3://waterdataprojectfinal/finaltable.csv'
-IAM_ROLE 'arn:aws:iam::130387669856:role/LabRole'
+TO 's3://bucket_name/csv_file_name.csv'
+IAM_ROLE 'arn:aws:iam::xxxxx:role/rolexxx'
 FORMAT AS CSV
 DELIMITER AS ','
 PARALLEL OFF
@@ -150,9 +150,9 @@ import boto3
 import os
 
 # Specify the AWS region and S3 bucket name
-region_name = 'us-east-1'
-bucket_name = 'waterdataproject'
-file_key = 'finaltable.csv000'  # Specify the key (path) of the file you want to download
+region_name = '#region'
+bucket_name = '#bucket_name'
+file_key = '#key'  # Specify the key (path) of the file you want to download
 
 # Create an S3 client
 s3_client = boto3.client('s3', region_name=region_name)
