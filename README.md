@@ -134,9 +134,9 @@ The bar graph details the count of records based on the number of days, offering
 
 **Decision Making**
 
-To decide whether the seasons are affecting the water consumption, we analyzed the data and made predictions. To implement this, we applied various machine learning algorithms using Cloud9 for Python coding. We used the Python SDK to implement and evaluate the performance of different models, including Gradient Boosting, Decision Tree, and KNN.
+To decide whether the seasons are affecting the water consumption, the data is analyzed and predictions are made. To implement this, various machine learning algorithms are applied using Cloud9 for Python coding. Python SDK is used to implement and evaluate the performance of different models, including Gradient Boosting, Decision Tree, and KNN.
 
-We used 3 features - 'season', 'tds #', '# days' to predict the target - 'charge range'. We chose data from specified years for training and testing, such that the testing and training years have less time difference. The train data is taken from years -2013, 2014, 2016, 2017,2018, 2019, 2020, 2022 and the test data is taken from 2015, 2018, 2021, 2023. We divided the data such that 75% of the data is allocated for training and 25% of the allocated to testing, to predict the ‘Charge Range’.
+Three features - 'season', 'tds #', '# days' are used to predict the target - 'charge range'. Data from specified years are selected for training and testing, such that the testing and training years have less time difference. The train data is taken from years -2013, 2014, 2016, 2017,2018, 2019, 2020, 2022 and the test data is taken from 2015, 2018, 2021, 2023. The data is divided such that 75% of the data is allocated for training and 25% of the allocated to testing, to predict the ‘Charge Range’.
 
 Commands to install modules in Cloud9 
 ```
