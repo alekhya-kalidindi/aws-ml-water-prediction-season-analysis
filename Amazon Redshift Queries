@@ -1,4 +1,4 @@
-#SQL Query to transform raw data into the desired format suitable for ML algorithm application.
+---SQL Query to transform raw data into the desired format suitable for ML algorithm application.---
 
 CREATE TABLE finaltable 
 AS
@@ -47,3 +47,15 @@ WHERE
 CAST("# days" AS INT) BETWEEN 25 and 35 
 AND "tds #" is NOT NULL 
 AND CAST(REPLACE("Water&Sewer Charges",',','') AS FLOAT) > 0)
+
+
+---Unload Data from Redshift to S3 Bucket---
+
+UNLOAD ('SELECT * from "dev"."public"."finaltable"')
+TO 's3://waterdataprojectfinal/finaltable.csv'
+IAM_ROLE 'arn:aws:iam::130387669856:role/LabRole'
+FORMAT AS CSV
+DELIMITER AS ','
+PARALLEL OFF
+HEADER;
+
